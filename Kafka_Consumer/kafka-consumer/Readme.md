@@ -3,6 +3,7 @@
 2. create a class KafkaConsumer, annotate with @Service
 
 3. create a Kafka Listener
+
 	@KafkaListener(topics = "Kafka_Example", groupId = "group_id")
     public void consume(String message){
         System.out.println("Consumed Message - "+message);
@@ -12,6 +13,7 @@
 4. Create a class KafkaConfiguration, annotate with @EnableKafka, @Configuration
 
 5. Add code below
+
 	@Bean
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> config = new HashMap<>();
@@ -67,6 +69,7 @@
     }
 
   3. Update the listener
+  
 	  @KafkaListener(topics = "Kafka_Example_Json", groupId = "group_json", containerFactory = "userKafkaListenerContainerFactory")
 	    public void consumeJson(User user){
 	        System.out.println("Consumed JSON Message - "+ user);
