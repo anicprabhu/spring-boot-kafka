@@ -31,10 +31,18 @@ public class User {
         this.salary = salary;
     }
 
+    public User(){
+        
+    }
     public User(String name, String department, String salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "User [department=" + department + ", name=" + name + ", salary=" + salary + "]";
     }
 
     
