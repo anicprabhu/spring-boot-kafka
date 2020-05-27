@@ -12,12 +12,11 @@ public class KafkaConsumer {
 
     }
 
-    @KafkaListener(topics = "Kafka_Example_json", groupId = "group_json", )
+    @KafkaListener(topics = "Kafka_Example_json", groupId = "group_json")
     public void consumeJson(String message){
         System.out.println("Consumed Message"+message);
 
     }
 
-    @KafkaListener(topics)
-
+ 
 }

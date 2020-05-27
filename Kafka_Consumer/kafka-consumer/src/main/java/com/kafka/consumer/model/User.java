@@ -1,7 +1,6 @@
-package com.kafka.producer.kafkaproducer.model;
+package com.kafka.consumer.model;
 
 public class User {
-
     private String name;
 
     private String department;
@@ -37,5 +36,6 @@ public class User {
         this.department = department;
         this.salary = salary;
     }
+
     
 }
